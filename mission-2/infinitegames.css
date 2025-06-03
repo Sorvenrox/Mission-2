@@ -1,0 +1,211 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #0d0d0d;
+  color: #000000;
+  background-image: url("space.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+    0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+header.tagline {
+  text-align: center;
+  text-shadow: #0d0d0d 0px 0px 10px;
+  color: #f0f0f0;
+  padding: 50px 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+}
+
+.tagline h1 {
+  font-size: 4em;
+  margin: 0;
+  color: #4d88b8;
+  font: tahoma;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.tagline p {
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: #f0f0f0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  font: tahoma;
+  font-weight: 400;
+  text-align: center;
+  padding: 0 20px;
+  line-height: 1.5;
+  max-width: 800px;
+  margin: auto;
+  font-style: italic;
+}
+
+input[type="submit"] {
+  display: flex;
+  margin: 20px 0px;
+  padding: 14px 25px;
+  width: 100px;
+  font-family: inherit;
+  font-weight: 700;
+  border: none;
+  border-radius: 15px;
+  background-color: rgb(71, 9, 243);
+  color: white;
+  width: 30%;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.5s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+input:hover[type="submit"] {
+  background-color: rgb(61, 218, 13);
+  color: rgb(0, 0, 0);
+  width: 30%;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.game-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.game-card img {
+  display: flex;
+  width: 50%;
+  object-fit: fill;
+  border-radius: 10%;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media {
+  backdrop-filter: blur(10px);
+  padding: 10px;
+}
+
+.social-media:hover {
+  color: #070201;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  text-shadow: 0 0 10px #4d88b8, 0 0 20px #4d88b8, 0 0 30px #4d88b8,
+    0 0 40px #4d88b8;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
+}
+
+.game-slide {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.slide {
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+  text-align: center;
+  position: relative;
+}
+
+.slide.active {
+  display: block;
+}
+
+.gallery-buttons {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.gallery-buttons button {
+  padding: 10px 20px;
+  font-size: 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.slide:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.3),
+    0 8px 30px rgba(0, 255, 255, 0.2);
+}
+
+/* Optional overlay on hover */
+.slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.5)
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+.slide:hover::after {
+  opacity: 1;
+}
+
+/* Optional: Animate text on hover */
+.slide-info {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.slide:hover .slide-info {
+  transform: translateY(-10px);
+  opacity: 1;
+}
+
+.slide-info h3,
+.slide-info p {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+    0 0 20px rgba(0, 255, 255, 0.3);
+}
